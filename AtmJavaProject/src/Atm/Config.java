@@ -33,7 +33,13 @@ public class Config {
             "Admin",
             this.senha
     };
-
-
-
+    public String getNome(){
+        return this.nome;
+    }
+    public double getSaldo(){
+        return this.saldo;
+    }
+    public void setNome(String _newName){
+        this.nome = _newName;
+    }
 }
