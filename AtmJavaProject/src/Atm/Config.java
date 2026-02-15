@@ -4,8 +4,6 @@ public class Config {
     private double saldo;
     private String nome;
     private String senha;
-    public boolean verificador = false;
-
     public Config(String _nome, String _senha,double saldoInicial){
         this.nome = _nome;
         this.senha = _senha;
