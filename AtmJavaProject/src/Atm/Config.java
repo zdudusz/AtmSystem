@@ -9,9 +9,15 @@ public class Config {
         this.senha = _senha;
         this.saldo = saldoInicial;
     }
+    public Config(String _nome, String _senha){
+        this.nome = _nome;
+        this.senha = _senha;
+    }
+    public Config(){
+    }
     private boolean verificador = false;
 
-    String[] users = {
+    static String[] users = {
             "Owner",
             "BirdPerson",
             "Rick",
@@ -20,9 +26,9 @@ public class Config {
             "Jerry Smith",
             "Morty",
             "Admin",
-            this.nome
+
     };
-    String[] passwords = {
+    static String[] passwords = {
             "1234",
             "Thamy",
             "Morty",
@@ -31,15 +37,15 @@ public class Config {
             "Beth",
             "Rick",
             "Admin",
-            this.senha
+
     };
-    public void  verificarAcesso(String login,String senha){
+    public static boolean  verificarAcesso(String login,String senha){
         for(int i =0;i<users.length;i++){
              if(users[i].equals(login)&&passwords[i].equals(senha)){
-                 this.verificador = true;
-                 break;
+                 return true;
              }
         }
+        return false;
     }
     public String getNome(){
         return this.nome;
