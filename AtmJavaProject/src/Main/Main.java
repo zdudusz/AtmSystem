@@ -27,7 +27,6 @@ public static void main(String[] args) {
             String _login = sc.nextLine();
             System.out.print("Insira sua senha: ");
             String _senha = sc.next();
-            sc.nextLine();
             System.out.print("Valor de deposito incial: ");
             double saldoInicial = sc.nextDouble();
             Config user = new Config(_login,_senha,saldoInicial);
