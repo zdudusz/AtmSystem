@@ -9,6 +9,8 @@ public class Config {
         this.senha = _senha;
         this.saldo = saldoInicial;
     }
+    private boolean verificador = false;
+
     String[] users = {
             "Owner",
             "BirdPerson",
@@ -31,6 +33,14 @@ public class Config {
             "Admin",
             this.senha
     };
+    public void  verificarAcesso(String login,String senha){
+        for(int i =0;i<users.length;i++){
+             if(users[i].equals(login)&&passwords[i].equals(senha)){
+                 this.verificador = true;
+                 break;
+             }
+        }
+    }
     public String getNome(){
         return this.nome;
     }
@@ -39,5 +49,8 @@ public class Config {
     }
     public void setNome(String _newName){
         this.nome = _newName;
+    }
+    public boolean getVerificador(){
+        return this.verificador;
     }
 }
