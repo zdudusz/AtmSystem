@@ -27,7 +27,7 @@ public static void main(String[] args) {
         String login = sc.nextLine();
         System.out.print("Insira sua senha: ");
         String senha = sc.next();
-         if(verifier = Config.verificarAcesso(login,senha)){
+         if(verifier == Config.verificarAcesso(login,senha)){
              user = new Config(login,senha);
          acessoAoMenu = true;}
          else{
