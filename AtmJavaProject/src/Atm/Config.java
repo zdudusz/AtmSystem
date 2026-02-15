@@ -1,7 +1,7 @@
 package Atm;
 
 public class Config {
-    private double saldo = 0;
+    private double saldo = 9999;
     private String nome;
     private String senha;
     public Config(String _nome, String _senha,double saldoInicial){

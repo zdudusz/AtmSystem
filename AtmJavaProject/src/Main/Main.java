@@ -20,7 +20,7 @@ public static void main(String[] args) {
     limparConsole();
     System.out.println("Bem vindo ao sistema ATM 24h! \n Você tem alguma conta? \n 1-SIM \n 2-NAO");
     String temConta = sc.next();
-    boolean verifier = false;
+    boolean verifier = true;
     if(temConta.equals("1")) {
         sc.nextLine();
         System.out.println("INSIRA SEU LOGIN: ");
