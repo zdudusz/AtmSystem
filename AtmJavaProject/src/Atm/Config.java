@@ -1,7 +1,7 @@
 package Atm;
 
 public class Config {
-    private double saldo;
+    private double saldo = 0;
     private String nome;
     private String senha;
     public Config(String _nome, String _senha,double saldoInicial){
@@ -65,5 +65,8 @@ public class Config {
     public void depositarSaldo(double saldoDepositado){
         this.saldo += saldoDepositado;
     }
-
+    public String toString() {
+        return "  Saldo: "+ getSaldo()
+                + "\n Nome do Titular: " + getNome();
+    }
 }
