@@ -59,4 +59,11 @@ public class Config {
     public boolean getVerificador(){
         return this.verificador;
     }
+    public void sacarSaldo(double saldoSacado){
+        this.saldo -= saldoSacado;
+    }
+    public void depositarSaldo(double saldoDepositado){
+        this.saldo += saldoDepositado;
+    }
+
 }
