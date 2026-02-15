@@ -14,6 +14,26 @@ public static void main(String[] args) {
         System.out.print("Insira sua senha: ");
         String senha = sc.next();
          verifier = Config.verificarAcesso(login,senha);
+
+    }
+    else if(temConta.equals("2")){
+        System.out.println("Deseja criar uma conta? \n 1-SIM \n 2-NAO");
+        sc.nextLine();
+        String flag = sc.next();
+        if(flag.equals("1")){
+            sc.nextLine();
+            System.out.println("INSIRA SEU LOGIN: ");
+            String _login = sc.nextLine();
+            System.out.print("Insira sua senha: ");
+            String _senha = sc.next();
+            sc.nextLine();
+            System.out.print("Valor de deposito incial: ");
+            double saldoInicial = sc.nextDouble();
+            Config user = new Config(_login,_senha,saldoInicial);
+
+        } else if (flag.equals("2")) {
+            System.out.print("SISTEMA FINALIZADO...");
+        }
     }
 }
 }
